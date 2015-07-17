@@ -1,32 +1,4 @@
-#include <cstdlib>
-#include <iostream>
-#include <algorithm>
-
-using namespace std;
-
-struct differenza{
-    long int valore,indice;
-};
-
-long int cmp(differenza const &a,differenza const &b){
-    return a.valore<b.valore;
-}
-
-long long solve(int N, int* M, int* P) {
-    long int i,sum=0;
-    differenza differenze[N];
-    for(i=0;i<N;i++){
-        differenze[i].valore=M[i]-P[i];
-        differenze[i].indice=i;
-    }
-    nth_element(differenze,differenze+(N/2),differenze+N,cmp);
-    for(i=0;i<N;i++){
-        if(i<N/2)
-            sum+=P[differenze[i].indice];
-        else
-            sum+=M[differenze[i].indice];
-    }
-    
-    return sum;
-}
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>

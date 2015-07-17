@@ -1,42 +1,4 @@
-#include <stdio.h>
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <string>
-#include <string.h>
-#include <queue>
-#include <utility>
-#include <functional>
-#include <queue>
-#include <map>
-#include <set>
-#include <math.h>
-
-using namespace std;
-
-typedef vector<int> vi;
-typedef pair<int, int> ii;
-typedef vector< ii > vii;
-
-int n;
-char s[100000][30];
-
-int main(){
-	freopen("input.txt","r",stdin);
-	freopen("output.txt","w",stdout);
-
-	cin>>n;
-
-	for(int i=0;i<n;i++)
-		scanf("%s",&s[i][0]);
-	int sz = strlen(s[0]);
-	for(int i=0;i<sz;i++)
-		for(int j=0;j<n;j++)
-			if(s[0][i] != s[j][i]){
-				cout<<i;
-				return 0;
-			}
-	cout<<sz;
-
-	return 0;
-}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>

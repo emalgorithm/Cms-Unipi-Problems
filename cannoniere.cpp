@@ -1,33 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-using namespace std;
-typedef pair<int,int> ii;
-
-int N,g[105];
-
-		
-
-int main(){
-	ifstream in; ofstream out;
-	in.open("input.txt"); out.open("output.txt");
-	
-	int m=0,ind;
-	in>>N;
-	
-	for(int i=0;i<N;i++){
-		int t,t2;
-		in>>t>>t2;
-		g[t]+=t2;
-	}
-	
-	for(int i=0;i<105;i++)
-		if(g[i]>m){
-			m=g[i];
-			ind=i;
-		}
-	out<<ind<<" "<<m;
-	
-    in.close(); out.close();
-    return 0;
-}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>

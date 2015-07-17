@@ -1,34 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <fstream>
-using namespace std;
-
-int d, s, sol, used[100];
-
-pair<int, int> p[100];
-
-int main(){
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    cin>>d>>s;
-
-    for(int i=0;i<s;i++)
-        cin>>p[i].second>>p[i].first;
-    
-    sort(p, p + s);
-    reverse(p, p + s);
-
-    int currDay = 0;
-    while(currDay <= d - 1){
-        for(int i=0;i<s;i++)
-            if(!used[i] && p[i].second <= currDay){
-                used[i] = 1;
-                currDay = p[i].first + 1;
-                sol++;
-                break;
-            }
-    }
-    cout<<sol;
-
-    return 0;
-}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>

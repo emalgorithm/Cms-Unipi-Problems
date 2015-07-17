@@ -1,30 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <algorithm>
-#include <vector>
-
-using namespace std;
-
-int N,M,s;
-
-int main() {
-	ifstream in; ofstream out;
-	in.open("input.txt"); out.open("output.txt");
-	in>>N>>M;
-	
-	for(int i=0;i<M;i++){
-		int t,t2;
-		in>>t>>t2;
-		if(t==s)
-		  s=t2;
-		else if(s==t2)
-		  s=t;
-	}
-	
-    out<<s;
-    
-    in.close(); out.close();
-    return 0;
-}
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
