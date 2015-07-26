@@ -1,4 +1,53 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <vector>
+#include <string>
+#include <utility>
+#include <stdio.h>
+#include <queue>
+#include <fstream>
+#include <functional>
+#include <cstdlib>
+#include <map>
+#include <set>
+
+using namespace std;
+
+typedef pair<int, int> ii ;
+typedef vector< ii >   vii ;
+typedef vector<int> vi ;
+
+int N,s[55]; 
+ifstream in; ofstream out;
+
+void ric(int curr, int c, int p){
+       if(c==N){
+            for(int i=0;i<p;i++)
+                out<<s[i]<<" ";
+            out<<endl;
+        }
+        for(int i=1;i<=curr;i++)
+            if(i+c<=N){
+                s[p]=i;
+                ric(i,c+i,p+1);
+            }
+}
+
+int main(){
+    
+    in.open("input.txt"); out.open("output.txt");
+    
+    in>>N;
+    
+    for(int i=0;i<N;i++){
+        s[0]=i+1;
+        ric(i+1,i+1,1);
+    }
+
+    in.close(); out.close();
+    return 0;
+}
+
+
+

@@ -1,4 +1,25 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int N,M,i,c,q,max,a[30];
+    ifstream in;
+    in.open("input.txt");
+    in>>N;in>>M;
+    for(i=1;i<=N;i++) {
+                     in>>a[i]; }
+    max=a[1];
+    for(i=1;i<=M;i++) {
+                     in>>c;in>>q;
+                     if(q==max) {
+                                max=c;} }
+    in.close();
+    ofstream out;
+    out.open("output.txt");
+    out<<max<<endl;
+    out.close();
+    return EXIT_SUCCESS;
+}

@@ -1,4 +1,33 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int N,valori[1000000],v[1000000],I,c;
+
+int main(){
+    ifstream in; ofstream out;
+    in.open("input.txt"); out.open("output.txt");
+    
+    in>>N;
+
+    for(int i=0;i<N;i++)
+        in>>valori[i];
+    
+    v[0]=1;
+    I=1;
+    while(v[I-1]<2){
+        I=((I+valori[I-1])%N)+1;
+        v[I-1]++;
+        c++;
+    }
+    
+    out<<N-c<<endl;
+    for(int i=0;i<N;i++){
+        if(v[i]==0)
+            out<<i+1<<" ";
+    }    
+    in.close(); out.close();
+    return 0;
+}
